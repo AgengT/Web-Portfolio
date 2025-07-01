@@ -1,0 +1,23 @@
+.starfield-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star-bg-img {
+  position: absolute;
+  opacity: 0.7;
+  pointer-events: none;
+  animation: star-twinkle infinite alternate;
+  filter: drop-shadow(0 0 6px #fff8);
+}
+
+@keyframes star-twinkle {
+  0% { opacity: 0.3; filter: drop-shadow(0 0 2px #fff2); }
+  50% { opacity: 1; filter: drop-shadow(0 0 12px #fff); }
+  100% { opacity: 0.3; filter: drop-shadow(0 0 2px #fff2); }
+} 

@@ -1,0 +1,149 @@
+/* About Section Styles */
+.about-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.about-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-icon-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-icon-container::before,
+.about-icon-container::after,
+.about-icon-container .inner-ring {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #005b9c;
+  opacity: 0.6;
+}
+
+.about-icon-container::before {
+  width: 100%;
+  height: 100%;
+  animation: spin-subtle 15s linear infinite reverse;
+}
+
+.about-icon-container::after {
+  width: 80%;
+  height: 80%;
+  animation: spin-subtle 10s linear infinite;
+}
+
+.about-icon-container .inner-ring {
+  width: 60%;
+  height: 60%;
+  animation: spin-subtle 8s linear infinite reverse;
+}
+
+.about-img-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #fff;
+  box-shadow: 0 2px 16px #005b9c33;
+  z-index: 2;
+  background: none;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: left;
+}
+
+.about-bio h2 {
+  margin-bottom: 1rem;
+}
+
+.about-desc-card {
+  background: #181818;
+  border-radius: 1.2rem;
+  padding: 1.5rem 2rem;
+  margin: 0 0 1.5rem 0;
+  box-shadow: 0 4px 24px 0 #0002;
+  max-width: 600px;
+}
+
+.about-desc {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+}
+
+.about-toolkit h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #005b9c;
+}
+
+.toolkit-scroller {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #005b9c #111;
+}
+
+.toolkit-scroller::-webkit-scrollbar {
+  height: 8px;
+}
+
+.toolkit-scroller::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 4px;
+}
+
+.toolkit-scroller::-webkit-scrollbar-thumb {
+  background-color: #005b9c;
+  border-radius: 4px;
+}
+
+.skill-badge {
+  background: #111;
+  color: #005b9c;
+  border: 1px solid #005b9c;
+  border-radius: 0.5em;
+  padding: 0.4em 1em;
+  font-size: 1em;
+  font-family: inherit;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .about-grid-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-right {
+    text-align: left;
+    align-items: center;
+  }
+  .about-desc {
+    text-align: center;
+  }
+} 

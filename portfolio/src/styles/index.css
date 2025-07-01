@@ -1,0 +1,54 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #fff;
+  text-decoration: underline;
+}
+a:hover {
+  color: #aaa;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  scroll-behavior: auto;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3e%3ccircle cx='50' cy='50' r='45' stroke='%23005b9c' stroke-width='1' fill='none' opacity='0.05'/%3e%3ccircle cx='150' cy='150' r='60' stroke='%23005b9c' stroke-width='1' fill='none' opacity='0.05'/%3e%3ccircle cx='200' cy='80' r='20' stroke='%23005b9c' stroke-width='1' fill='none' opacity='0.05'/%3e%3ccircle cx='80' cy='250' r='30' stroke='%23005b9c' stroke-width='1' fill='none' opacity='0.05'/%3e%3c/svg%3e");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  margin: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid #fff;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s;
+}
+button:hover {
+  border-color: #aaa;
+  background: #222;
+}
+button:focus,
+button:focus-visible {
+  outline: 2px solid #fff;
+} 

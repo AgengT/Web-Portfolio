@@ -1,0 +1,77 @@
+/* Contacts Section Styles */
+
+.contacts-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* width: 100%; */
+  text-align: center;
+}
+
+.contacts-section h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contacts-section p {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2.2rem;
+}
+
+.contact-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #181818;
+  box-shadow: 0 2px 16px #005b9c22;
+  transition: box-shadow 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.contact-icon .gallifreyan-icon-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke: #005b9c;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-icon svg:not(.gallifreyan-icon-bg) {
+  position: relative;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.contact-icon:hover {
+  background: #222;
+  box-shadow: 0 4px 24px #005b9c44;
+}
+
+.contact-icon:hover .gallifreyan-icon-bg {
+  transform: rotate(90deg);
+}
+
+.contact-icon:hover svg:not(.gallifreyan-icon-bg) {
+  color: #005b9c;
+  transform: scale(1.1);
+} 

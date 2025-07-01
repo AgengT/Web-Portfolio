@@ -1,0 +1,24 @@
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  opacity: 0.6;
+  animation: spin-subtle 10s linear infinite;
+}
+
+.scroll-indicator svg {
+  color: #fff;
+  width: 36px;
+  height: 36px;
+}
+
+@keyframes spin-subtle {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+} 

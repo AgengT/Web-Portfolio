@@ -1,0 +1,53 @@
+.flying-tardis-container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.flying-tardis {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  opacity: 0;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.fly-by-1 { animation-name: fly-by-1; }
+.fly-by-2 { animation-name: fly-by-2; }
+.fly-by-3 { animation-name: fly-by-3; }
+.fly-by-4 { animation-name: fly-by-4; }
+
+@keyframes fly-by-1 {
+  0% { transform: translateX(-120%) translateY(10vh) rotateZ(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  90% { opacity: 0.9; }
+  100% { transform: translateX(120vw) translateY(30vh) rotateZ(360deg); opacity: 0; }
+}
+
+@keyframes fly-by-2 {
+  0% { transform: translateX(120vw) translateY(40vh) rotateZ(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  90% { opacity: 0.9; }
+  100% { transform: translateX(-120%) translateY(60vh) rotateZ(-360deg); opacity: 0; }
+}
+
+@keyframes fly-by-3 {
+  0% { transform: translateY(-120vh) translateX(50vw) rotateZ(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  90% { opacity: 0.9; }
+  100% { transform: translateY(120vh) translateX(70vw) rotateZ(360deg); opacity: 0; }
+}
+
+@keyframes fly-by-4 {
+  0% { transform: translateY(120vh) translateX(20vw) rotateZ(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  90% { opacity: 0.9; }
+  100% { transform: translateY(-120vh) translateX(40vw) rotateZ(-360deg); opacity: 0; }
+} 
