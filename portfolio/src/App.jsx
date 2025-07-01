@@ -35,6 +35,27 @@ function App({ worksData }) {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    // Scroll to section if hash is present in URL on initial mount
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    // Listen for hash changes (e.g., when navigating with <Link to="/#works">)
+    const onHashChange = () => {
+      const id = window.location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
   return (
     <div className="portfolio-container">
       <StarfieldBackground />
